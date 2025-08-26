@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 
-interface CelebrationViewProps {
-  onTimelineClick?: () => void;
-}
-
-export const CelebrationView: React.FC<CelebrationViewProps> = ({ onTimelineClick }) => {
+export const CelebrationView: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const targetText = 'Noura';
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Trigger confetti animation
@@ -56,9 +54,9 @@ export const CelebrationView: React.FC<CelebrationViewProps> = ({ onTimelineClic
         
         <button 
           className="timeline-button"
-          onClick={onTimelineClick}
+          onClick={() => navigate('/invitation')}
         >
-          View Timeline
+          Celebration Invitation
         </button>
       </div>
     </div>

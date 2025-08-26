@@ -1,8 +1,5 @@
 import React from "react";
-
-interface TimelineViewProps {
-  onBack: () => void;
-}
+import { useNavigate } from "react-router-dom";
 
 interface TimelineItem {
   time: string;
@@ -55,7 +52,8 @@ const timelineItems: TimelineItem[] = [
   },
 ];
 
-export const TimelineView: React.FC<TimelineViewProps> = ({ onBack }) => {
+export const TimelineView: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="timeline-view">
       <div className="timeline-container">
@@ -87,6 +85,10 @@ export const TimelineView: React.FC<TimelineViewProps> = ({ onBack }) => {
             </div>
           ))}
         </div>
+        
+        <button className="timeline-back-btn" onClick={() => navigate('/celebration')}>
+          Back to Celebration
+        </button>
       </div>
     </div>
   );
