@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 
-export const CelebrationView: React.FC = () => {
+interface CelebrationViewProps {
+  onTimelineClick?: () => void;
+}
+
+export const CelebrationView: React.FC<CelebrationViewProps> = ({ onTimelineClick }) => {
   const [typedText, setTypedText] = useState('');
   const targetText = 'Noura';
 
@@ -51,13 +55,10 @@ export const CelebrationView: React.FC = () => {
         </p>
         
         <button 
-          className="memories-button"
-          onClick={() => {
-            // Placeholder for memories functionality
-            console.log('Memories clicked');
-          }}
+          className="timeline-button"
+          onClick={onTimelineClick}
         >
-          Memories
+          View Timeline
         </button>
       </div>
     </div>
