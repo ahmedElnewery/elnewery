@@ -52,7 +52,7 @@ export const CountdownView: React.FC<CountdownViewProps> = ({
     <div className="countdown-view">
       <div className="countdown-header">
         <h1 className="countdown-title">
-          Special Day, Special Queen Noura! 💫 🎂✨
+          Special Day, Special Queen Noura! 🎂✨
         </h1>
         <p className="countdown-subtitle">Cheers in Progress 🥂</p>
       </div>
