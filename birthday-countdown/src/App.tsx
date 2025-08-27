@@ -4,6 +4,7 @@ import { CountdownView } from "./components/CountdownView";
 import { CelebrationView } from "./components/CelebrationView";
 import { MessageView } from "./components/MessageView";
 import { TimelineView } from "./components/TimelineView";
+import { SpinWheelView } from "./components/SpinWheelView";
 import { DateTime } from 'luxon';
 import "./App.css";
 
@@ -47,6 +48,7 @@ function App() {
           />
           <Route path="/invitation" element={<TimelineView />} />
           <Route path="/message" element={<MessageView />} />
+          <Route path="/wheel" element={<SpinWheelView />} />
         </Routes>
       </div>
     </Router>

@@ -67,6 +67,13 @@ export const CelebrationView: React.FC = () => {
           >
             💌 I wrote a message
           </button>
+
+          <button
+            className="timeline-button wheel-button"
+            onClick={() => navigate("/wheel")}
+          >
+            🎡 Spin the Wheel
+          </button>
         </div>
       </div>
     </div>
