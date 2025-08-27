@@ -4,32 +4,30 @@ import { CountdownView } from "./components/CountdownView";
 import { CelebrationView } from "./components/CelebrationView";
 import { MessageView } from "./components/MessageView";
 import { TimelineView } from "./components/TimelineView";
-import { hasReachedTarget } from "./utils/countdown";
-import { defaultStorage } from "./storage/StorageAdapter";
+import { DateTime } from 'luxon';
 import "./App.css";
-
-const STORAGE_KEY = "bd.countdownHit";
 
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
 
+  const isBirthdayToday = () => {
+    const now = DateTime.now().setZone('Africa/Cairo');
+    const currentMonth = now.month;
+    const currentDay = now.day;
+
+    // Check if today is August 28th (month 8, day 28)
+    return currentMonth === 8 && currentDay === 28;
+  };
+
   useEffect(() => {
-    // Check if we've already hit the target date
-    const hasHit = defaultStorage.get<boolean>(STORAGE_KEY);
-
-    if (hasHit || hasReachedTarget()) {
-      // Directly show celebration when target is reached or already hit
+    // Show celebration if it's the birthday (August 28th)
+    if (isBirthdayToday()) {
       setShowCelebration(true);
-
-      if (!hasHit) {
-        defaultStorage.set(STORAGE_KEY, true);
-      }
     }
   }, []);
 
   const handleReachTarget = () => {
-    defaultStorage.set(STORAGE_KEY, true);
-    // Immediately show celebration when countdown finishes
+    // Show celebration when countdown finishes
     setShowCelebration(true);
   };
 
