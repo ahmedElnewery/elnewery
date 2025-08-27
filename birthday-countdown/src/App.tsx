@@ -9,7 +9,6 @@ import { defaultStorage } from "./storage/StorageAdapter";
 import "./App.css";
 
 const STORAGE_KEY = "bd.countdownHit";
-const MESSAGE_VIEWED_KEY = "bd.messageViewed";
 
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
@@ -34,10 +33,6 @@ function App() {
     setShowCelebration(true);
   };
 
-  const handleMessageClose = () => {
-    defaultStorage.set(MESSAGE_VIEWED_KEY, true);
-  };
-
   return (
     <Router>
       <div className="app">
@@ -53,10 +48,7 @@ function App() {
             }
           />
           <Route path="/invitation" element={<TimelineView />} />
-          <Route
-            path="/message"
-            element={<MessageView onClose={handleMessageClose} />}
-          />
+          <Route path="/message" element={<MessageView />} />
         </Routes>
       </div>
     </Router>

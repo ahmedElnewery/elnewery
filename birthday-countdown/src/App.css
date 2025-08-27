@@ -141,6 +141,13 @@ body {
   font-weight: 400;
 }
 
+.celebration-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .timeline-button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;

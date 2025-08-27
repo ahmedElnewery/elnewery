@@ -85,8 +85,8 @@ export const TimelineView: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        <button className="timeline-back-btn" onClick={() => navigate('/celebration')}>
+
+        <button className="timeline-back-btn" onClick={() => navigate("/")}>
           Back to Celebration
         </button>
       </div>

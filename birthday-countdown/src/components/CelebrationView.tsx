@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import confetti from 'canvas-confetti';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import confetti from "canvas-confetti";
 
 export const CelebrationView: React.FC = () => {
-  const [typedText, setTypedText] = useState('');
-  const targetText = 'Noura';
+  const [typedText, setTypedText] = useState("");
+  const targetText = "Noura";
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -13,16 +13,16 @@ export const CelebrationView: React.FC = () => {
       confetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 0.6 }
+        origin: { y: 0.6 },
       });
     };
 
     // Initial confetti burst
     triggerConfetti();
-    
+
     // Additional confetti bursts
     const confettiInterval = setInterval(triggerConfetti, 3000);
-    
+
     // Typing effect
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -44,20 +44,30 @@ export const CelebrationView: React.FC = () => {
     <div className="celebration-view">
       <div className="celebration-content">
         <h1 className="celebration-headline">
-          It's here! Happy Birthday, <span className="typed-name">{typedText}</span>
+          It's here! Happy Birthday,{" "}
+          <span className="typed-name">{typedText}</span>
           <span className="cursor">|</span>
         </h1>
-        
+
         <p className="celebration-message">
           This moment was worth the wait. Let's make today unforgettable. ❤️
         </p>
-        
-        <button 
-          className="timeline-button"
-          onClick={() => navigate('/invitation')}
-        >
-          Celebration Invitation
-        </button>
+
+        <div className="celebration-buttons">
+          <button
+            className="timeline-button"
+            onClick={() => navigate("/invitation")}
+          >
+            🎉 Accept Invitation
+          </button>
+
+          <button
+            className="timeline-button message-button"
+            onClick={() => navigate("/message")}
+          >
+            💌 I wrote a message
+          </button>
+        </div>
       </div>
     </div>
   );
