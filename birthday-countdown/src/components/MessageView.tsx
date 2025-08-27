@@ -7,28 +7,22 @@ export const MessageView: React.FC = () => {
     <div className="message-view">
       <div className="message-paper">
         <div className="message-header">
-          <h1 className="message-title">Happy Birthday, Noura! 🎉</h1>
+          <h1 className="message-title">Happy Birthday, my love! 🎉❤️</h1>
           <div className="message-date">August 28th</div>
         </div>
 
         <div className="message-content">
-          <p className="message-line">My dearest Noura,</p>
           <p className="message-line">
-            Today marks another beautiful year of your amazing journey.
+            Today isn't just a day — it's the best day of the whole year, because it's the day the world got blessed with you. I don't just love celebrating your birthday, I live for it. Your existence makes my life brighter, and honestly, the whole planet a much better place. 🌍✨
           </p>
           <p className="message-line">
-            Your smile lights up every room and your kindness touches every
-            heart.
+            I adore your laugh, your energy, your spirit — and your beauty that's unlike any girl in the world (sorry, world, but it's true 😏🔥).
           </p>
           <p className="message-line">
-            May this new year bring you endless joy, love, and wonderful
-            adventures.
+            So today, we celebrate you — my amazing fiancée, my partner in crime, my everything. Let's make this day unforgettable, just like you are.
           </p>
           <p className="message-line">
-            You deserve all the happiness in the world and so much more.
-          </p>
-          <p className="message-line">
-            Wishing you the most magical birthday celebration! ✨
+            I love you, Nora. Always. ❤️
           </p>
         </div>
 

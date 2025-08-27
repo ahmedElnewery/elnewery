@@ -238,7 +238,7 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 60px;
+  left: 40px;
   width: 2px;
   height: 100%;
   background: #ff6b6b;
@@ -295,7 +295,7 @@ body {
   color: #2d3748;
   margin-bottom: 1rem;
   text-align: left;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 
 .message-line:first-child {
@@ -387,7 +387,7 @@ body {
   }
 
   .message-line {
-    padding-left: 60px;
+    padding-left: 40px;
     font-size: 1rem;
   }
 

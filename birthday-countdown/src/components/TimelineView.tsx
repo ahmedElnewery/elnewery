@@ -18,7 +18,7 @@ const timelineItems: TimelineItem[] = [
   },
   {
     time: "12:00 PM",
-    activity: "Drive to Cairo",
+    activity: "Drive to District 5",
     icon: "🚗",
     description:
       "Scenic car ride together, music, and great conversations on our way",
